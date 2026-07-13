@@ -1,0 +1,12 @@
+# OpenCode session data
+.opencode/
+
+# macOS
+.DS_Store
+
+# Editor / OS noise
+*.swp
+*~
+
+# Local build artifacts
+*.tmp
