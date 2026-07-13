@@ -44,3 +44,15 @@ Resume from `TASK_QUEUE.md` -> V1.0 hardware sourcing/printing. Two optional doc
 - Working directory is the `orochi` folder (its own git repo, NOT the parent "Personal Projects" repo).
 - No em dashes allowed in output (project CLAUDE.md rule); verify before committing docs.
 - Upstream URLs verified: ZeroG -> github.com/ZeroGDesign (docs.zerog.one); StealthChanger -> github.com/DraftShift/StealthChanger.
+
+---
+
+## Directives for Next Session (from user, 2026-07-13)
+1. **Continue detailed planning first.** Flesh out the project in depth before any build work: complete specifications, full Bill of Materials with part numbers and sources, pin-level wiring tables, calibration procedures, and the V2.0 RP2040 hub concept.
+2. **Then start execution.** Once planning artifacts are sufficiently detailed, begin actual work across hardware / CAD / software as appropriate (e.g., printing Mercury One.1 + StealthChanger parts, authoring runnable Klipper configs, drafting the RP2040 schematic). Do NOT start physical assembly/flashing until the planning docs are in place.
+3. **Planning artifacts to produce next (in order):**
+   - Detailed BOM for V1.0 with concrete sources/part numbers (rails, hotends, extruders, electronics, fasteners).
+   - SKR 1.4 Turbo full pin-level wiring diagram/table for V1.0 (motion + T0/T1 + 2 dock switches).
+   - Runnable V1.0 config skeletons: `printer.cfg`, `T0.cfg`, `T1.cfg`, `toolchanger.cfg`.
+   - V2.0 RP2040 junction-hub concept schematic and pin assignment.
+   - Calibration runbook (e-steps, per-tool pressure advance, dock positions, Z offsets, PID, input shaper).
