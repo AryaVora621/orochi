@@ -80,6 +80,8 @@ The first milestone delivers a fully functional, printable, and documented two-t
 
 This stage proves out the kinematics, the docking geometry, and the Bowden strategy before any additional electronics are introduced.
 
+> **Design deep-dive:** The full mechanical, electrical, and calibration plan for the two-tool stage is documented in [`docs/V1.0-Dual-Extruder-Design.md`](docs/V1.0-Dual-Extruder-Design.md).
+
 ### Version 2.0 (Future Expansion): 6-Tool Multi-Board System
 
 The second milestone scales the platform to its full six-tool vision by bringing a second control board and a custom hub online.
@@ -97,24 +99,40 @@ The second milestone scales the platform to its full six-tool vision by bringing
 
 At the heart of Orochi is a **multi-MCU topology** coordinated by a single Klipper host. The Raspberry Pi runs Klipper, Moonraker, and a web interface (Mainsail or Fluidd). Every controller board connects to the Pi over USB and is addressed as an independent `[mcu]` section in the Klipper config.
 
-```
-                         +---------------------------+
-                         |   Raspberry Pi (Host)     |
-                         |  Klipper + Moonraker + UI |
-                         +---------------------------+
-                            |           |           |
-                 USB        |   USB     |   USB     |  (future)
-                            v           v           v
-                  +----------------+ +----------------+ +------------------+
-                  | BTT SKR 1.4    | | Creality 4.2.2 | | RP2040 Junction  |
-                  | Turbo (Master) | | (Slave MCU)    | | Hub (Future V2)  |
-                  +----------------+ +----------------+ +------------------+
-                   X, Y (CoreXY)      X->E2           4x 24V heater mosfets
-                   Z (bed)            Y->E3           4x thermistor inputs
-                   E0 -> T0 extruder  Z->E4           4x dock microswitch GPIO
-                   E1 -> T1 extruder  E ->E5
-                   T0/T1 heaters      (steppers only)
-                   T0/T1 thermistors
+```mermaid
+flowchart TB
+    PI["Raspberry Pi<br/>Klipper + Moonraker + UI"]
+
+    subgraph V1["Version 1.0 - Active"]
+        direction TB
+        SKR["BTT SKR 1.4 Turbo<br/><b>Master MCU</b>"]
+        EX0["Extruder E0<br/>recycled Ender 3 (static)"]
+        EX1["Extruder E1<br/>recycled Ender 3 (static)"]
+        T0["Tool T0<br/>V6 hotend + SC plate"]
+        T1["Tool T1<br/>V6 hotend + SC plate"]
+    end
+
+    subgraph V2["Version 2.0 - Future"]
+        direction TB
+        CRE["Creality 4.2.2<br/>Slave MCU"]
+        RP["RP2040 Junction Hub"]
+    end
+
+    PI ---|USB| SKR
+    PI -.->|USB| CRE
+    PI -.->|USB| RP
+
+    SKR -->|CoreXY X / Y| G["Gantry motion"]
+    SKR -->|Z| B["Bed axis"]
+    SKR -->|step/dir E0| EX0
+    SKR -->|step/dir E1| EX1
+    SKR -->|heater0 + TH0| T0
+    SKR -->|heater1 + TH1| T1
+    EX0 -->|Bowden tube| T0
+    EX1 -->|Bowden tube| T1
+
+    CRE -->|step/dir E2-E5| EXX["Extruders E2-E5 (static)"]
+    RP -->|4x mosfet / 4x therm / dock GPIO| TXX["Tools T2-T5"]
 ```
 
 ### Component Roles
