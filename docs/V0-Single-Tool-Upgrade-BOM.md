@@ -41,7 +41,7 @@ This is separate from the multi-tool V1.0 BOM (`V1.0-BOM.md`); it drops the dock
 
 | Item | Qty | Price (unverified) | Note |
 |---|---|---|---|
-| Enclosure tent for Ender 5 Pro | 1 | $29.99 to $64.30 across snippets | Several results were Ender 3 tents; check listed dimensions against the Ender 5 Pro frame. "Fireproof" is mostly marketing; only the Creality tent cites a test |
+| Enclosure tent for Ender 5 Pro | 1 | No confirmed Ender 5 Pro price yet (snippets mixed in Ender 3 tents) | Several results were Ender 3 tents; check listed dimensions against the Ender 5 Pro frame. "Fireproof" is mostly marketing; only the Creality tent cites a test |
 | ABS or ABS+ filament, 1 kg | 2 | eSun ABS+ 17.49 EUR/kg (~USD 19-20) | One retailer only; no brand comparison |
 
 ## Totals (rough, mixed currencies)
