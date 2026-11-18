@@ -27,6 +27,24 @@ This is separate from the multi-tool V1.0 BOM (`V1.0-BOM.md`); it drops the dock
 | Fastener kit | 1 | Not needed: kit includes screws with 20% extra | |
 | Printed Mercury parts | set | $0 (print on SV08) | PETG or ABS |
 
+### Stage 1 alternative: self-source the kit (checked 2026-11-18 in the browser)
+
+Official ZeroG BOM (docs.zerog.one, fetched): Ender 5 (Pro) needs **330 mm** MGN12H x3 (the older DREMC article's 300 mm is out of date), one 370 mm 2020 extrusion, 2 idlers 20T 6 mm, 2 pulleys 20T, a Gates LL-2GT belt (length per the store note), 20 F695-2RS bearings, 10 M5x30 precision dowel pins, 50 M3x5 heat inserts, 40 M5 precision shims (golden spacers, not washers), plus about 12 bolt sizes and 35 M3 / 20 M5 T-nuts. Recommended hotend: Rapido HF. DREMC notes: use the higher-preload Z1 block on the X axis.
+
+AliExpress listings seen (aliexpress.us, listing prices at time of viewing, per-length options not individually opened):
+
+| Item | Listing | Price |
+|---|---|---|
+| Genuine HIWIN MGN12H, Z1/Z0, 330 mm option | 1 rail + 1 block | $32.29 |
+| 3x Hiwin MGN12 rails + 3 MGN12H blocks | 3 sets, 330 mm in length list | $112.69 |
+| Generic MGN12H rail + block (118 sold, 4.5 stars) | 1 set | $8.81 |
+| FYSETC hollow MGN12H 330 mm for E5 Pro | 1 rail | $74.03 |
+| 2020 aluminum extrusion | length not confirmed | $8.32 each (1 pc) |
+
+Not priced: fasteners, T-nuts, bearings, pulleys, idlers, belt, inserts, shims, dowel pins (listings did not load). Treat the small-parts bundle as roughly $40 to $70 until priced; this is a guess.
+
+Rough self-source total: **about $130 to $200 with genuine Hiwin rails** vs **$240 to $270 for the full kit**. With generic rails it could drop below $100, at a quality risk. The base kit ($155) plus Hiwin rails ($113) is about $268, so it loses to both.
+
 ## Stage 2: toolhead and hotend
 
 | Item | Qty | Price (unverified) | Note |
