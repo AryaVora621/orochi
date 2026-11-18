@@ -22,16 +22,16 @@ This is separate from the multi-tool V1.0 BOM (`V1.0-BOM.md`); it drops the dock
 
 | Item | Qty | Price (unverified) | Note |
 |---|---|---|---|
-| Mercury One.1 base/motion kit, no motors | 1 | Fabreeko base kit listed $154.99 (listing was for Ender 5 Plus; find the Ender 5 / Pro SKU) | Full kit with motors is $239.99 to $269.99; skip the motors |
-| MGN12H rails (3x, 300 or 330 mm for Pro) | 1 set | Not confirmed whether the base kit includes them; DREMC lists a rail-inclusive motion kit at A$224.31 for the Plus | **Open item:** confirm rail length and inclusion in the exact Ender 5 Pro SKU |
-| Fastener kit (about 65 M3x8 plus others) | 1 | Not found | Buy only if the kit lacks it |
+| HoneyBadger Mercury One kit, **full** variant (owner pasted the listing text) | 1 | $239.99 to $269.99 (search snippets); base kit snippet $154.99, Plus listing | The listing text says the **base kit has no rails and no fans**. Base kit: 2 HoneyBadger 48 mm NEMA 17, 370 mm extrusion (Pro), 100 M3 heat inserts, BOM screws with 20% extra, 2 Omron microswitches, 50W 24V heater, 104-GT2 thermistor, 6 mm Gates belts, 8.5 mm idlers. Full kit adds 3x MGN12H stainless rails (330 mm Pro) and 5015 + 4010 fans |
+| MGN12H rails (3x, 330 mm for Pro) | 1 set | In the full kit; buy separately only if base + rails + fans is cheaper than the full kit gap (about $85 per snippets) | Printed parts must match the 8.5 mm idler height |
+| Fastener kit | 1 | Not needed: kit includes screws with 20% extra | |
 | Printed Mercury parts | set | $0 (print on SV08) | PETG or ABS |
 
 ## Stage 2: toolhead and hotend
 
 | Item | Qty | Price (unverified) | Note |
 |---|---|---|---|
-| Bambu X1/P1 style hotend, 0.6 mm hardened steel (bare) | 1 | ~USD 17-24 (A$24.96 and 18.40 GBP listings); complete assembly 27 GBP to A$47 | Check which part fits; listings disagree on P1 vs X1 |
+| High-flow hotend, choice open | 1 | Bambu-style 0.6 mm hardened bare ~USD 17-24 (A$24.96 and 18.40 GBP snippets) | **Not a drop-in.** Bambu hotends use their own 40W heater, thermistor, connector and mount; the kit's 50W heater and 104-GT2 thermistor suit a V6-style hotend. Choose the hotend after the toolhead mount |
 | Printed toolhead mount for Sherpa + hotend + fan duct | 1 | $0 (print) | Mount STL not yet chosen |
 | 24V hotend fan (4010) and part-cooling blower | 2 | ~USD 10 total (no listing checked) | General estimate |
 | JST connectors, wire, heat shrink | assorted | ~USD 8 (from V1.0 BOM) | |
@@ -41,7 +41,7 @@ This is separate from the multi-tool V1.0 BOM (`V1.0-BOM.md`); it drops the dock
 
 | Item | Qty | Price (unverified) | Note |
 |---|---|---|---|
-| Enclosure tent for Ender 5 Pro | 1 | $29.99 to $64.30 across listings | "Fireproof" is mostly marketing; only the Creality tent cites a test |
+| Enclosure tent for Ender 5 Pro | 1 | $29.99 to $64.30 across snippets | Several results were Ender 3 tents; check listed dimensions against the Ender 5 Pro frame. "Fireproof" is mostly marketing; only the Creality tent cites a test |
 | ABS or ABS+ filament, 1 kg | 2 | eSun ABS+ 17.49 EUR/kg (~USD 19-20) | One retailer only; no brand comparison |
 
 ## Totals (rough, mixed currencies)
